@@ -11,7 +11,7 @@
 }
 :root{
   --bg-color: #fffbde;
-  --snd-bg-color: #4682a9;
+  --snd-bg-color: #C4E1E6;
   --text-color: #131d4f;
   --main-color: #749bc2;
 
@@ -34,6 +34,7 @@ section{
 }
 
 /* Header section code */
+
 .header{
    position: fixed;
    width: 100%;
@@ -83,3 +84,166 @@ section{
   cursor: pointer;
   display: none;
 }
+
+
+/* home section code */
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home-img img {
+  width: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  animation: floatImage 4s ease-in-out infinite; 
+  transition: 0.4s ease;
+}
+
+.home-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 35px var(--main-color),
+              0 0 45px var(--main-color);
+              
+}
+
+@keyframes floatImage{
+  0% {
+    transform:tranlateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.home-content {
+  margin-left: 5rem;
+}
+
+
+.home-content h3{
+  font-size: 3.7rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem;
+}
+
+span{
+  color: var(--main-color);
+}
+
+.home-content h1{
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.gradient-background {
+  background: linear-gradient(49deg,#88d4e3,#b3e1eb);
+  background-size: 120% 120%;
+  animation: gradient-animation 12s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.socia.media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 0.2rem solid var(--main-color); 
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 1rem;
+  transition: 0.3s ease;
+}
+
+.socia.media a:hover{
+  transform: scale(1.2) translateY(-10px);
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 25px var(--main-color);
+
+}
+
+/* about sectoin code */
+
+ 
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--snd-bg-color);
+}
+
+.about-img img{
+  width: 25vw;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  animation: floatImage 4s ease-in-out infinite;
+  transition: 0.4s ease;
+}
+
+.about-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 45px var(--main-color);
+}
+@keyframes floatImage{
+  0% {
+    transform:translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+  
+}
+
+.heading{
+  font-size: 6rem;
+  text-align: left;
+
+}
+
+.about-content{
+  padding: 0 4rem;
+} 
+
+.about-content h2{
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3{
+  font-size: 3rem;
+}
+
+.about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
